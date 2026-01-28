@@ -418,3 +418,50 @@ logo span {
     font-weight: bold;
     margin-left: 5px;
 }
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem; 
+        line-height: 1.2;
+    }
+    .navbar {
+        padding: 10px 3%;
+    }
+    .navbar ul li a {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    .logo-circle {
+        width: 45px;
+        height: 45px;
+    }
+    .info-container {
+        flex-direction: column; 
+        text-align: center;
+        gap: 30px;
+    }
+    .info-text p {
+        text-align: center;
+    }
+    .title-white {
+        font-size: 2rem;
+    }
+    .katalog-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    .card-katalog img {
+        height: 140px; 
+    }
+    .nama-item {
+        font-size: 0.9rem;
+    }
+    .layanan-card {
+        width: 100%; 
+    }
+    .title-layanan {
+        font-size: 2rem;
+    }
+    .peta-wrapper {
+        height: 300px; 
+    }
+}
