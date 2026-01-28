@@ -419,49 +419,51 @@ logo span {
     margin-left: 5px;
 }
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.2rem; 
-        line-height: 1.2;
-    }
     .navbar {
-        padding: 10px 3%;
-    }
-    .navbar ul li a {
-        padding: 5px 10px;
-        font-size: 0.8rem;
+        padding: 10px 2%;
+        flex-wrap: wrap; 
+        justify-content: center; 
     }
     .logo-circle {
-        width: 45px;
-        height: 45px;
+        width: 40px; 
+        height: 40px;
     }
-    .info-container {
-        flex-direction: column; 
-        text-align: center;
-        gap: 30px;
+    .navbar ul {
+        margin-top: 10px;
+        gap: 5px;
     }
-    .info-text p {
-        text-align: center;
-    }
-    .title-white {
-        font-size: 2rem;
+    .navbar ul li a {
+        font-size: 0.75rem; 
+        padding: 6px 10px;
     }
     .katalog-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 15px;
+        grid-template-columns: repeat(2, 1fr) !important; 
+        gap: 12px;
+        padding: 10px;
+    }
+    .card-katalog {
+        padding: 10px;
     }
     .card-katalog img {
-        height: 140px; 
+        height: 120px; 
     }
     .nama-item {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
-    .layanan-card {
-        width: 100%; 
+    .harga-item {
+        font-size: 0.8rem;
+        padding: 5px 10px !important;
     }
-    .title-layanan {
-        font-size: 2rem;
+    .btn-tambah {
+        font-size: 0.8rem;
+        padding: 6px;
     }
-    .peta-wrapper {
-        height: 300px; 
+    .wa-float {
+        padding: 8px 12px;
+        bottom: 15px;
+        right: 15px;
+    }
+    .wa-float span {
+        display: none; 
     }
 }
