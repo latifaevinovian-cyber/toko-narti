@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toko Hj.Narti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/logo_toko.png" alt="Logo" class="logo-circle">
+            <span>Toko Hj.Narti</span>
+        </div>
+        <ul>
+            <li><a href="#beranda">beranda</a></li>
+            <li><a href="#tentang">tentang kami</a></li>
+            <li><a href="#layanan">layanan</a></li>
+            <li><a href="#produk">produk</a></li>
+            <li><a href="#lokasi">lokasi</a></li>
+        </ul>
+    </nav>
+
+    <section id="beranda" class="hero">
+        <div class="hero-content">
+            <h1>TOKO KELONTONG HJ.NARTI</h1>
+            <p>"semua ada, harga bersahabat untuk keluarga anda"</p>
+            <a href="#produk" class="btn-main">Lihat Produk</a>
+        </div>
+    </section>
+
+    <section id="tentang" class="section-tentang-baru">
+        <div class="container">
+            <div class="info-container">
+                <div class="info-text">
+                    <h2 class="title-white">Tentang Kami</h2>
+                    <p class="text-white">Toko Hj. Narti adalah toko kelontong yang melayani kebutuhan sehari-hari warga Dusun Bunikerta dan sekitarnya. Kami menyediakan berbagai macam sembako dan kebutuhan rumah tangga dengan kualitas baik dan harga ramah di kantong. Kepuasan pelanggan dan pelayanan yang hangat selalu menjadi prioritas kami</p>
+                    <div class="details-box">
+                        <p class="text-white"><strong>Jam Buka:</strong> 05.00 - 21.00 WIB</p>
+                        <p class="text-white"><strong>Alamat:</strong> Jl. Raya Dusun Bunikerta, Galaherang, Maleber, Kuningan.</p>
+                    </div>
+                </div>
+                <div class="info-image">
+                    <img src="assets/gambar_sembako.jpg" alt="Foto Sembako" class="img-estetik">
+                </div>
+            </div> 
+        </div> 
+    </section>
+
+    <section id="layanan" class="section-layanan">
+        <div class="container">
+            <h2 class="title-layanan">Layanan Kami</h2>
+            <div class="layanan-grid">
+                <div class="layanan-card"><div class="icon">🛒</div><h3>Produk Lengkap</h3><p>Menyediakan berbagai kebutuhan pokok, sembako, dan keperluan harian dengan kualitas terjamin</p></div>
+                <div class="layanan-card"><div class="icon">💰</div><h3>Harga Bersahabat</h3><p>Harga terjangkau dan ramah di kantong, sesuai kebutuhan warga sekitar</p></div>
+                <div class="layanan-card"><div class="icon">😊</div><h3>Pelayanan Ramah</h3><p>Melayani dengan senyum dan sikap ramah khas warga Dusun Bunikerta</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produk" class="section-produk-katalog">
+        <div class="container">
+            <h2 class="title-produk">Katalog Produk Toko</h2>
+
+            <h3 class="nama-kategori">📦 Sembako</h3>
+            <div class="katalog-grid">
+                <div class="card-katalog"><img src="assets/beras_toko.jpeg"><div class="card-footer"><span class="nama-item">Beras 1kg</span><span class="harga-item">Rp 16.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-beras" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Beras 1kg', 16000, 'qty-beras')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/gula_pasir.webp"><div class="card-footer"><span class="nama-item">Gula Pasir 1/4</span><span class="harga-item">Rp 5.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-gula" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Gula Pasir 1/4', 5000, 'qty-gula')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/minyak_goreng.png"><div class="card-footer"><span class="nama-item">Minyak Goreng 1/4</span><span class="harga-item">Rp 6.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-minyak" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Minyak Goreng 1/4', 6000, 'qty-minyak')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/telur_toko.jpg"><div class="card-footer"><span class="nama-item">Telur Ayam 1/2</span><span class="harga-item">Rp 19.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-telur" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Telur Ayam 1/2', 19000, 'qty-telur')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/mie_instan.jpg"><div class="card-footer"><span class="nama-item">Mie Instan 1</span><span class="harga-item">Rp 3.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-mie" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Mie Instan 1', 3000, 'qty-mie')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/gas_elpiji.jpg"><div class="card-footer"><span class="nama-item">Gas Elpiji</span><span class="harga-item">Rp 23.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-gas" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Gas Elpiji', 23000, 'qty-gas')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/teh_tubruk.jpg"><div class="card-footer"><span class="nama-item">Teh Tubruk 3</span><span class="harga-item">Rp 5.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-tehtubruk" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Teh Tubruk 3', 5000, 'qty-tehtubruk')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/kopi_toko.jpg"><div class="card-footer"><span class="nama-item">Kopi 1 Sachet</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-kopi" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kopi 1 Sachet', 2000, 'qty-kopi')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/susu_toko.jpg"><div class="card-footer"><span class="nama-item">Susu 1 Sachet</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-susu" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Susu 1 Sachet', 2000, 'qty-susu')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/tepung.jpg"><div class="card-footer"><span class="nama-item">Tepung 1/4</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-tepung" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Tepung 1/4', 2000, 'qty-tepung')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+            </div>
+
+            <h3 class="nama-kategori">🥬 Sayuran & Protein</h3>
+            <div class="katalog-grid">
+                <div class="card-katalog"><img src="assets/sayur_kol.png"> <div class="card-footer"><span class="nama-item">Kol 1/2</span><span class="harga-item">Rp 3.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-kol" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kol 1/2', 3000, 'qty-kol')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/wortel.webp"> <div class="card-footer"><span class="nama-item">Wortel 1/2</span><span class="harga-item">Rp 7.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-wortel" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Wortel 1/2', 7000, 'qty-wortel')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/bawang_merah.webp"> <div class="card-footer"><span class="nama-item">Bawang Merah 1/4</span><span class="harga-item">Rp 6.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-bawang-merah" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Bawang Merah 1/4', 6000, 'qty-bawang-merah')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/bawang_putih.webp"> <div class="card-footer"><span class="nama-item">Bawang Putih 1/4</span><span class="harga-item">Rp 6.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-bawang-putih" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Bawang Putih 1/4', 6000, 'qty-bawang-putih')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/cabe_merah.jpg"> <div class="card-footer"><span class="nama-item">Cabe Merah 1/4</span><span class="harga-item">Rp 10.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-cabe-merah" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Cabe Merah 1/4', 10000, 'qty-cabe-merah')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/cabe_rawit.jpeg"> <div class="card-footer"><span class="nama-item">Cabe Rawit 1/4</span><span class="harga-item">Rp 10.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-cabe-rawit" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Cabe Rawit 1/4', 10000, 'qty-cabe-rawit')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/ayam.jpg"> <div class="card-footer"><span class="nama-item">Ayam 1/4</span><span class="harga-item">Rp 9.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-ayam" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Ayam 1/4', 9000, 'qty-ayam')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/ikan_pindang.avif"> <div class="card-footer"><span class="nama-item">Ikan Pindang 1 Mika</span><span class="harga-item">Rp 12.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-pindang" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Ikan Pindang 1 Mika', 12000, 'qty-pindang')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/bawang_daun.webp"> <div class="card-footer"><span class="nama-item">Bawang Daun 1/4</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-daun" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Bawang Daun 1/4', 2000, 'qty-daun')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/ikan_basah.jpg"> <div class="card-footer"><span class="nama-item">Ikan Basah 1/2</span><span class="harga-item">Rp 15.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-ikan-basah" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Ikan Basah 1/2', 15000, 'qty-ikan-basah')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+            </div>
+
+            <h3 class="nama-kategori">🧂 Bumbu Dapur</h3>
+            <div class="katalog-grid">
+                <div class="card-katalog"><img src="assets/racik.webp"> <div class="card-footer"><span class="nama-item">Racik 1 Sachet</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-racik" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Racik 1 Sachet', 2000, 'qty-racik')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/royko.jpg"> <div class="card-footer"><span class="nama-item">Royko 1 Sachet</span><span class="harga-item">Rp 500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-royko" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Royko 1 Sachet', 500, 'qty-royko')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/masako.png"> <div class="card-footer"><span class="nama-item">Masako 1 Sachet</span><span class="harga-item">Rp 500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-masako" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Masako 1 Sachet', 500, 'qty-masako')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/kecap.jpg"> <div class="card-footer"><span class="nama-item">Kecap 1 Sachet</span><span class="harga-item">Rp 1.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-kecap" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kecap 1 Sachet', 1000, 'qty-kecap')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/msg_sasa.webp"> <div class="card-footer"><span class="nama-item">MSG 1 Sachet</span><span class="harga-item">Rp 1.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-msg" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('MSG 1 Sachet', 1000, 'qty-msg')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/ladaku.webp"> <div class="card-footer"><span class="nama-item">Ladaku 1 Sachet</span><span class="harga-item">Rp 1.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-ladaku" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Ladaku 1 Sachet', 1000, 'qty-ladaku')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/ketumbar.webp"> <div class="card-footer"><span class="nama-item">Ketumbar 1 Sachet</span><span class="harga-item">Rp 1.500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-ketumbar" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Ketumbar 1 Sachet', 1500, 'qty-ketumbar')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/saos.webp"> <div class="card-footer"><span class="nama-item">Saos 1 Sachet</span><span class="harga-item">Rp 500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-saos" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Saos 1 Sachet', 500, 'qty-saos')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/jahe.jpg"> <div class="card-footer"><span class="nama-item">Jahe 1/4</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-jahe" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Jahe 1/4', 2000, 'qty-jahe')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/kemiri.jpg"> <div class="card-footer"><span class="nama-item">Kemiri 1/4</span><span class="harga-item">Rp 3.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-kemiri" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kemiri 1/4', 3000, 'qty-kemiri')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/lengkuas.jpg"> <div class="card-footer"><span class="nama-item">Lengkuas 1/4</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-lengkuas" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Lengkuas 1/4', 2000, 'qty-lengkuas')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/kencur.webp"> <div class="card-footer"><span class="nama-item">Kencur 1/4</span><span class="harga-item">Rp 5.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-kencur" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kencur 1/4', 5000, 'qty-kencur')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+            </div>
+
+            <h3 class="nama-kategori">🚬 Rokok</h3>
+            <div class="katalog-grid">
+                <div class="card-katalog"><img src="assets/roko_mangga.jpg"><div class="card-footer"><span class="nama-item">Mangga 1 Bks</span><span class="harga-item">Rp 12.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-mangga" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Mangga 1 Bks', 12000, 'qty-mangga')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/roko_filter.webp"><div class="card-footer"><span class="nama-item">Filter 1 Bks</span><span class="harga-item">Rp 23.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-filter" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Filter 1 Bks', 23000, 'qty-filter')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/roko_camel.webp"><div class="card-footer"><span class="nama-item">Camel Kretek</span><span class="harga-item">Rp 20.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-camel" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Camel Kretek', 20000, 'qty-camel')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/roko_apel.webp"><div class="card-footer"><span class="nama-item">Djarum 76 Apel</span><span class="harga-item">Rp 16.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-76apel" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Djarum 76 Apel', 16000, 'qty-76apel')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/roko_esse.jpg"><div class="card-footer"><span class="nama-item">Esse Bana Pop</span><span class="harga-item">Rp 30.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-esse" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Esse Bana Pop', 30000, 'qty-esse')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+            </div>
+
+            <h3 class="nama-kategori">🥤 Makanan & Minuman</h3>
+            <div class="katalog-grid">
+                <div class="card-katalog"><img src="assets/tehpucuk.jpg"><div class="card-footer"><span class="nama-item">Teh Pucuk</span><span class="harga-item">Rp 4.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-pucuk" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Teh Pucuk', 4000, 'qty-pucuk')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/fanta.png"><div class="card-footer"><span class="nama-item">Fanta 1 Botol</span><span class="harga-item">Rp 5.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-fanta" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Fanta 1 Botol', 5000, 'qty-fanta')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/sprite.jpg"><div class="card-footer"><span class="nama-item">Sprite 1 Botol</span><span class="harga-item">Rp 5.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-sprite" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Sprite 1 Botol', 5000, 'qty-sprite')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/pocari.png"><div class="card-footer"><span class="nama-item">Pocari Sweat</span><span class="harga-item">Rp 8.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-pocari" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Pocari Sweat', 8000, 'qty-pocari')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/floridina.webp"><div class="card-footer"><span class="nama-item">Floridina 1 Botol</span><span class="harga-item">Rp 6.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-floridina" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Floridina 1 Botol', 6000, 'qty-floridina')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/kue.webp"><div class="card-footer"><span class="nama-item">Kue 1 Pcs</span><span class="harga-item">Rp 1.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-kue" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kue 1 Pcs', 1000, 'qty-kue')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/aoka.jpg"><div class="card-footer"><span class="nama-item">Kue Aoka</span><span class="harga-item">Rp 2.500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-aoka" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kue Aoka', 2500, 'qty-aoka')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/kue_kering.webp"><div class="card-footer"><span class="nama-item">Kue Kering 1 Pak</span><span class="harga-item">Rp 3.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-kuekering" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Kue Kering 1 Pak', 3000, 'qty-kuekering')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/roma.webp"><div class="card-footer"><span class="nama-item">Roma Kelapa</span><span class="harga-item">Rp 11.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-roma" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Roma Kelapa', 11000, 'qty-roma')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/ciki.jpg"><div class="card-footer"><span class="nama-item">Ciki 1 Pcs</span><span class="harga-item">Rp 500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-ciki" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Ciki 1 Pcs', 500, 'qty-ciki')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+            </div>
+
+            <h3 class="nama-kategori">📓 Alat tulis sekolah</h3>
+            <div class="katalog-grid">
+                <div class="card-katalog"><img src="assets/buku_tulis.jpg"><div class="card-footer"><span class="nama-item">Buku Tulis 1 Pcs</span><span class="harga-item">Rp 3.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-buku" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Buku Tulis 1 Pcs', 3000, 'qty-buku')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/buku_gambar.jpeg"><div class="card-footer"><span class="nama-item">Buku Gambar</span><span class="harga-item">Rp 2.500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-gambar" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Buku Gambar', 2500, 'qty-gambar')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/penggaris.jpg"><div class="card-footer"><span class="nama-item">Penggaris 1 Pcs</span><span class="harga-item">Rp 1.500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-penggaris" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Penggaris 1 Pcs', 1500, 'qty-penggaris')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/penghapus.jpg"><div class="card-footer"><span class="nama-item">Penghapus 1 Pcs</span><span class="harga-item">Rp 1.500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-penghapus" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Penghapus 1 Pcs', 1500, 'qty-penghapus')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/pulpen.webp"><div class="card-footer"><span class="nama-item">Pulpen 1 Pcs</span><span class="harga-item">Rp 2.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-pulpen" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Pulpen 1 Pcs', 2000, 'qty-pulpen')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/pensil.webp"><div class="card-footer"><span class="nama-item">Pensil Warna Pak</span><span class="harga-item">Rp 12.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-pensil" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Pensil Warna Pak', 12000, 'qty-pensil')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/lem.jpeg"><div class="card-footer"><span class="nama-item">Lem 1 Pcs</span><span class="harga-item">Rp 1.500</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-lem" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Lem 1 Pcs', 1500, 'qty-lem')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+                <div class="card-katalog"><img src="assets/tipe_x.jpg"><div class="card-footer"><span class="nama-item">Tipex 1 Pcs</span><span class="harga-item">Rp 3.000</span><div class="qty-wrapper" style="display: flex; gap: 5px; margin-top: 10px; width: 100%;"><input type="number" id="qty-tipex" value="1" min="1" style="width: 50px; border-radius: 5px; border: none; padding: 5px; text-align: center;"><button class="btn-tambah" onclick="tambahKeKeranjang('Tipex 1 Pcs', 3000, 'qty-tipex')" style="flex: 1; margin-top: 0;">🛒 Tambah</button></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lokasi" class="section-lokasi">
+        <div class="container">
+            <h2 class="title-produk">Lokasi Toko Kami</h2>
+            <p style="text-align: center; margin-bottom: 20px;">📍 Dusun Bunikerta RT.001/RW.001 Desa Galaherang, Kec. Maleber, Kab. Kuningan</p>
+        <div class="peta-wrapper">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3958.463283626242!2d108.6017!3d-7.063779!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDMnNDkuNiJTIDEwOMKwMzYnMDYuMSJF!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                width="100%" 
+                height="450" 
+                style="border:0; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="https://www.google.com/maps/search/?api=1&query=-7.063779,108.6017" target="_blank" class="btn-petunjuk">
+                Petunjuk arah ke Toko
+            </a>
+        </div>
+        </div>
+    </section>
+
+    <a href="javascript:void(0);" class="wa-float" onclick="kirimKeWA()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+        <span>Pesan Sekarang (<span id="jumlah-keranjang">0</span>)</span>
+    </a>
+
+    <button onclick="bukaModalLogin()" style="position:fixed;top:15px;right:15px;z-index:9999;background:rgba(0,0,0,0.3);border:none;padding:10px;border-radius:10px;cursor:pointer">🔒</button>
+
+    <div id="modalLogin" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:10000;align-items:center;justify-content:center;backdrop-filter:blur(5px)">
+        <div style="background:white;padding:40px;border-radius:20px;width:90%;max-width:400px">
+            <h2 style="color:#916b88;text-align:center">Internal Toko</h2>
+            <input type="text" id="userLogin" placeholder="Username" style="width:100%;padding:12px;margin-top:15px;border-radius:10px;border:1px solid #ddd">
+            <input type="password" id="passLogin" placeholder="Password" style="width:100%;padding:12px;margin-top:15px;border-radius:10px;border:1px solid #ddd">
+            <button onclick="prosesLogin()" style="width:100%;padding:14px;background:#916b88;color:white;border:none;border-radius:10px;margin-top:20px;font-weight:bold;cursor:pointer">Masuk Sistem</button>
+            <button onclick="tutupModalLogin()" style="width:100%;margin-top:10px;background:none;border:none;color:#888;cursor:pointer">Batal</button>
+        </div>
+    </div>
+
+    <div id="dashboardSistem" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#f0f2f5;z-index:11000;overflow-y:auto;padding:20px">
+        <div style="max-width:1100px;margin:0 auto;background:white;padding:25px;border-radius:15px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px">
+                <h2 id="sapaanUser" style="color:#916b88">Halo!</h2>
+                <button onclick="logoutSistem()" style="padding:10px 20px;background:#e74c3c;color:white;border:none;border-radius:10px;cursor:pointer">Logout</button>
+            </div>
+            <div id="sectionStatistik" style="display:none;margin-bottom:20px;font-weight:bold;color:green">Total Omzet Selesai: <span id="totalOmzet">Rp 0</span></div>
+            <div id="tabelRiwayat" style="overflow-x:auto"></div>
+            <button id="btnHapusSemua" onclick="hapusSemuaData()" style="display:none;background:#ff7675;color:white;border:none;padding:10px;border-radius:8px;margin-top:20px;cursor:pointer">Reset Semua Data</button>
+        </div>
+    </div>
+
+    <script>
+        let keranjang = [];
+        let userAktif = null;
+
+        function tambahKeKeranjang(nama, harga, inputId) {
+            const el = document.getElementById(inputId);
+            let qty = el ? parseInt(el.value) : 1;
+            if (isNaN(qty) || qty < 1) qty = 1;
+            const idx = keranjang.findIndex(i => i.nama === nama);
+            if (idx > -1) { keranjang[idx].qty += qty; } else { keranjang.push({ nama, harga, qty }); }
+            document.getElementById('jumlah-keranjang').innerText = keranjang.reduce((a, b) => a + b.qty, 0);
+            alert(qty + " " + nama + " masuk keranjang!");
+        }
+
+        function kirimKeWA() {
+            if (keranjang.length === 0) { alert("Pilih barang dulu!"); return; }
+            catatPesanan();
+            let teks = "Halo Toko Hj. Narti, saya pesan:\n\n";
+            let total = 0;
+            keranjang.forEach((item, i) => {
+                let sub = item.harga * item.qty;
+                teks += `${i+1}. *${item.nama}* (${item.qty}x) - Rp ${sub.toLocaleString()}\n`;
+                total += sub;
+            });
+            teks += `\n*Total: Rp ${total.toLocaleString()}*`;
+            const linkWA = `https://api.whatsapp.com/send?phone=6282240355800&text=${encodeURIComponent(teks)}`;
+            window.open(linkWA, '_blank').focus();
+        }
+
+        function catatPesanan() {
+            let riwayat = JSON.parse(localStorage.getItem('riwayatToko')) || [];
+            riwayat.unshift({ id: Date.now(), waktu: new Date().toLocaleString('id-ID'), item: [...keranjang], total: keranjang.reduce((s, i) => s + (i.harga * i.qty), 0), status: "proses" });
+            localStorage.setItem('riwayatToko', JSON.stringify(riwayat));
+        }
+
+        function prosesLogin() {
+            const u = document.getElementById('userLogin').value;
+            const p = document.getElementById('passLogin').value;
+            if (u === "owner" && p === "narti789") { userAktif = { nama: "Hj. Narti", role: "pemilik" }; } 
+            else if (u === "admin" && p === "admin123") { userAktif = { nama: "Karyawan", role: "admin" }; } 
+            else { alert("User/Pass Salah!"); return; }
+            document.getElementById('modalLogin').style.display = 'none';
+            document.getElementById('dashboardSistem').style.display = 'block';
+            renderDashboard();
+        }
+
+        function renderDashboard() {
+            const container = document.getElementById('tabelRiwayat');
+            const riwayat = JSON.parse(localStorage.getItem('riwayatToko')) || [];
+            document.getElementById('sapaanUser').innerText = "Halo, " + userAktif.nama + " (" + userAktif.role + ")";
+            const isOwner = userAktif.role === 'pemilik';
+            document.getElementById('sectionStatistik').style.display = isOwner ? 'block' : 'none';
+            document.getElementById('btnHapusSemua').style.display = isOwner ? 'block' : 'none';
+            
+            if(isOwner) {
+                let omzet = riwayat.filter(r => r.status === 'Selesai').reduce((s, r) => s + r.total, 0);
+                document.getElementById('totalOmzet').innerText = "Rp " + omzet.toLocaleString();
+            }
+
+            let h = `<table border="1" style="width:100%;border-collapse:collapse"><tr><th>Waktu</th><th>Item</th><th>Total</th><th>Status</th></tr>`;
+            riwayat.forEach(r => {
+                let its = r.item.map(i => `${i.nama}(${i.qty})`).join(", ");
+                h += `<tr><td>${r.waktu}</td><td>${its}</td><td>Rp ${r.total.toLocaleString()}</td><td>
+                    <select onchange="ubahStatus(${r.id}, this.value)">
+                        <option value="Baru" ${r.status === 'Baru' ? 'selected' : ''}>Baru</option>
+                        <option value="Proses" ${r.status === 'Proses' ? 'selected' : ''}>Proses</option>
+                        <option value="Selesai" ${r.status === 'Selesai' ? 'selected' : ''}>Selesai</option>
+                    </select></td></tr>`;
+            });
+            container.innerHTML = h + "</table>";
+        }
+
+        function ubahStatus(id, s) {
+            let r = JSON.parse(localStorage.getItem('riwayatToko'));
+            r[r.findIndex(x => x.id === id)].status = s;
+            localStorage.setItem('riwayatToko', JSON.stringify(r));
+            renderDashboard();
+        }
+
+        function hapusSemuaData() { if(confirm("Hapus semua?")) { localStorage.removeItem('riwayatToko'); renderDashboard(); } }
+        function bukaModalLogin() { document.getElementById('modalLogin').style.display = 'flex'; }
+        function tutupModalLogin() { document.getElementById('modalLogin').style.display = 'none'; }
+        function logoutSistem() { document.getElementById('dashboardSistem').style.display = 'none'; }
+
+        // Script Navbar Scrolled
+        window.onscroll = () => {
+            const nav = document.querySelector('.navbar');
+            if (window.scrollY > 50) nav.classList.add('scrolled'); else nav.classList.remove('scrolled');
+        };
+    </script>
+</body>
+</html>
