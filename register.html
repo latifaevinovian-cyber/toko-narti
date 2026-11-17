@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daftar — Toko Hj. Narti</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar scrolled navbar-auth">
+  <div class="logo">
+    <img src="assets/logo_toko.png" alt="Logo" class="logo-circle" onerror="this.style.display='none'">
+    <span>Toko Hj.Narti</span>
+  </div>
+  <ul>
+    <li><a href="index.html">beranda</a></li>
+    <li><a href="index.html#produk">produk</a></li>
+    <li><a href="login.html">login</a></li>
+  </ul>
+</nav>
+
+<section class="mini-hero">
+  <h2>Daftar Akun Baru</h2>
+  <p>Buat akun pelanggan untuk belanja dan melacak pesananmu.</p>
+</section>
+
+<main class="container auth-main">
+  <div class="form-card">
+    <h1>Daftar Akun</h1>
+    <p class="muted">Akun baru otomatis berperan sebagai pelanggan. Password minimal 8 karakter, harus mengandung huruf dan angka, dan tidak boleh password yang umum.</p>
+    <form id="registerForm" novalidate>
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" required autocomplete="name" placeholder="Nama lengkap">
+      <label for="email">Email</label>
+      <input type="email" id="email" required autocomplete="email" placeholder="contoh: nama@email.com">
+      <label for="password">Password</label>
+      <input type="password" id="password" required autocomplete="new-password" placeholder="Minimal 8 karakter, huruf + angka">
+      <label for="password2">Ulangi Password</label>
+      <input type="password" id="password2" required autocomplete="new-password" placeholder="Ulangi password">
+      <div class="error" id="formError" role="alert"></div>
+      <div style="margin-top:18px"><button type="submit" class="btn btn-primary btn-block">Daftar</button></div>
+    </form>
+    <p style="margin-top:14px">Sudah punya akun? <a href="login.html">Login di sini</a></p>
+    <p style="margin-top:14px"><a href="index.html">← Kembali ke katalog</a></p>
+  </div>
+</main>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var u = window.TokoAuth.currentUser();
+  if (u) { window.location.href = 'index.html'; return; }
+  var form = document.getElementById('registerForm');
+  var err = document.getElementById('formError');
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    err.style.display = 'none';
+    var nama = document.getElementById('nama').value;
+    var email = document.getElementById('email').value;
+    var pw = document.getElementById('password').value;
+    var pw2 = document.getElementById('password2').value;
+    if (pw !== pw2) { err.textContent = 'Password dan ulangi password tidak sama.'; err.style.display = 'block'; return; }
+    var res = await window.TokoAuth.register(nama, email, pw);
+    if (!res.ok) { err.textContent = res.message; err.style.display = 'block'; return; }
+    alert('Pendaftaran berhasil. Selamat datang, ' + res.user.nama + '!');
+    window.location.href = 'index.html';
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login — Toko Hj. Narti</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar scrolled navbar-auth">
+  <div class="logo">
+    <img src="assets/logo_toko.png" alt="Logo" class="logo-circle" onerror="this.style.display='none'">
+    <span>Toko Hj.Narti</span>
+  </div>
+  <ul>
+    <li><a href="index.html">beranda</a></li>
+    <li><a href="index.html#produk">produk</a></li>
+    <li><a href="register.html">daftar</a></li>
+  </ul>
+</nav>
+
+<section class="mini-hero">
+  <h2>Masuk ke Toko Hj. Narti</h2>
+  <p>Login untuk belanja, melihat pesananmu, atau mengelola toko (admin).</p>
+</section>
+
+<main class="container auth-main">
+  <div class="form-card">
+    <h1>Login</h1>
+    <p class="muted">Masuk untuk belanja dan melihat pesananmu. Admin diarahkan ke Dashboard.</p>
+    <form id="loginForm" novalidate>
+      <label for="email">Email</label>
+      <input type="email" id="email" required autocomplete="email" placeholder="contoh: user@toko.id">
+      <label for="password">Password</label>
+      <input type="password" id="password" required autocomplete="current-password" placeholder="Minimal 8 karakter, huruf + angka">
+      <div class="error" id="formError" role="alert"></div>
+      <div style="margin-top:18px"><button type="submit" class="btn btn-primary btn-block">Login</button></div>
+    </form>
+    <p style="margin-top:14px">Belum punya akun? <a href="register.html">Daftar di sini</a></p>
+    <p style="margin-top:14px"><a href="index.html">← Kembali ke katalog</a></p>
+  </div>
+</main>
+<script src="js/store.js"></script>
+<script src="js/auth.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var u = window.TokoAuth.currentUser();
+  if (u) { window.location.href = u.role === 'admin' ? 'admin.html' : 'index.html'; return; }
+  var form = document.getElementById('loginForm');
+  var err = document.getElementById('formError');
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    err.style.display = 'none';
+    var email = document.getElementById('email').value;
+    var password = document.getElementById('password').value;
+    var res = await window.TokoAuth.login(email, password);
+    if (!res.ok) { err.textContent = res.message; err.style.display = 'block'; return; }
+    window.location.href = res.user.role === 'admin' ? 'admin.html' : 'index.html';
+  });
+});
+</script>
+</body>
+</html>
